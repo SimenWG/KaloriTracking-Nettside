@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaloriteller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Kaloriteller</h1>
+            <ul class="nav-links">
+                <li><a href="./1repmax-nettside/index.html">1 Rep Max Calculator</a></li>
+                <li><a href="#">Om</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Legg til matvare</h2>
+        <div id="inputForm">
+            <label for="foodItem">Velg matvare:</label>
+            <select id="foodItem">
+                <option value="kylling">Kylling</option>
+                <option value="kjøttdeig">Kjøttdeig</option>
+                <option value="egg">Egg</option>
+                <option value="melk">Melk</option>
+                <option value="havregryn">Havregryn</option>
+                <option value="redbull250">Redbull</option>
+                <option value="burn">Burn Original</option>
+                <option value="monster">Monster Original</option>
+                <option value="sjokolademelk">Sjokolademelk</option>
+                <option value="ris">Ris</option>
+            </select>
+            <label for="amount">Mengde:</label>
+            <input type="number" id="amount" min="0" step="any">
+            <button onclick="addFood()">Legg til matvare</button>
+        </div>
+        <div id="foodList">
+            <h2>Spiste matvarer:</h2>
+            <ul id="list"></ul>
+        </div>
+        <div id="calories"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
