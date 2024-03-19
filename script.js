@@ -1,14 +1,14 @@
-// script.js
+
 const foodCalories = {
     kylling: 165,
-    kjøttdeig: 250,
-    egg: 78,
+    kjøttdeig: 240,
+    egg: 155,
     melk: 42,
     burn: 63,
     havregryn: 389,
-    redbull250: 110,
-    monster: 230,
-    sjokolademelk: 155,
+    redbull250: 46,
+    monster: 42,
+    sjokolademelk: 83,
     ris: 130
 };
 
@@ -32,7 +32,6 @@ function addFood() {
     listItem.setAttribute("data-amount", amount);
     listItem.setAttribute("data-foodItem", foodItem);
 
-    // Legg til knapp for å fjerne matvaren
     const removeButton = document.createElement("button");
     removeButton.textContent = "Fjern";
     removeButton.onclick = function() {
@@ -40,7 +39,6 @@ function addFood() {
     };
     listItem.appendChild(removeButton);
 
-    // Legg til knapp for å doble mengden
     const doubleButton = document.createElement("button");
     doubleButton.textContent = "Doble";
     doubleButton.onclick = function() {
@@ -64,7 +62,7 @@ function removeFood(item) {
 function doubleAmount(item) {
     const amount = parseFloat(item.getAttribute("data-amount"));
     const foodItem = item.getAttribute("data-foodItem");
-    const calories = foodCalories[foodItem] * ((amount * 2) / 100); // Dobler mengden
+    const calories = foodCalories[foodItem] * ((amount * 2) / 100); 
     totalCalories += calories;
     item.textContent = `${(amount * 2).toFixed(2)} g/ml ${foodItem}: ${calories.toFixed(2)} kalorier`;
 
